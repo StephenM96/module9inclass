@@ -15,7 +15,8 @@ const getUsers = (res) => {
 
 // uses JSON from request body to create new user in DB
 const createUser = (data, res) => {
-  Models.User.create(data)
+    console.log("createUser data: ", data)
+    Models.User.create(data)
     .then((data) => {
       res.send({ result: 200, data: data });
     })

@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 // http://localhost:8081/api/users/create
 // POST to create a new user
 router.post('/create', (req, res) => {
-    Controllers.userController.createUser(res)
+    Controllers.userController.createUser(req.body, res)
 })
 
 // http://localhost:8081/api/users/:id
