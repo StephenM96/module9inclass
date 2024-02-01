@@ -8,6 +8,9 @@ let dbConnect = require('./dbConnect')
 // parse requests of content-type - application / json;
 app.use(express.json());
 
+let userRoutes = require("./routes/userRoutes")
+app.use('/api/users', userRoutes)
+
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to my MongoDB application." });
 });
